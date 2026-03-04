@@ -1,8 +1,8 @@
 {
-	"noahh": "v1.0.0-beta",
+	"noahh": "v1.0.0",
 	"version": "v1.0.0",
-	"id": "noahh.textureldr",
-	"name": "TextureLDR",
+	"id": "noahh.texture-loader",
+	"name": "Texture Loader",
 	"developer": "Noahh Team",
 	"description": "Texture Pack Manager"
 }
