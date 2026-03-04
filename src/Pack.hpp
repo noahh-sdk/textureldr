@@ -10,7 +10,7 @@
 #include "Edit.hpp"
 #include <json/stl_serialize.hpp>
 
-USE_NOAHH_NAMESPACE();
+using namespace noahh::prelude;
 
 struct PackInfo {
     VersionInfo m_textureldr;

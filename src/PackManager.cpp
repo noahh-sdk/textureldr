@@ -8,7 +8,7 @@
 #include <Noahh/utils/ranges.hpp>
 #include <Noahh/binding/GameManager.hpp>
 
-USE_NOAHH_NAMESPACE();
+using namespace noahh::prelude;
 
 PackManager* PackManager::get() {
     static auto inst = new PackManager;

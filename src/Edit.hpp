@@ -8,7 +8,7 @@
 #include <ghc/filesystem.hpp>
 #include <cocos2d.h>
 
-USE_NOAHH_NAMESPACE();
+using namespace noahh::prelude;
 
 struct NodeEdit : public std::enable_shared_from_this<NodeEdit> {
     NodeEdit* m_parent = nullptr;

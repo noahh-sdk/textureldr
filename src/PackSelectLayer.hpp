@@ -5,7 +5,7 @@
 #include <Noahh/ui/ScrollLayer.hpp>
 #include "Pack.hpp"
 
-USE_NOAHH_NAMESPACE();
+using namespace noahh::prelude;
 
 class PackSelectLayer : public CCLayer {
 protected:

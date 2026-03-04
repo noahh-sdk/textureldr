@@ -3,7 +3,7 @@
 #include <Noahh/ui/Popup.hpp>
 #include "Pack.hpp"
 
-USE_NOAHH_NAMESPACE();
+using namespace noahh::prelude;
 
 class PackInfoPopup : public Popup<std::shared_ptr<Pack>> {
 protected:

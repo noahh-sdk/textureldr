@@ -6,7 +6,7 @@
 #include <Noahh/ui/BasedButtonSprite.hpp>
 #include "PackManager.hpp"
 
-USE_NOAHH_NAMESPACE();
+using namespace noahh::prelude;
 
 class $modify(MyMenuLayer, MenuLayer) {
     bool init() {
