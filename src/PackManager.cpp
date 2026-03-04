@@ -1,5 +1,7 @@
 #include "PackManager.hpp"
 #include <Noahh/loader/Mod.hpp>
+#include <Noahh/loader/ModEvent.hpp>
+#include <Noahh/loader/ModJsonTest.hpp>
 #include <Noahh/loader/Loader.hpp>
 #include <Noahh/utils/file.hpp>
 #include <Noahh/utils/map.hpp>
@@ -122,12 +124,12 @@ void PackManager::applyPacks(CreateLayerFunc func) {
     reloadTextures(func);
 }
 
-$on(LoadData) {
+$on_mod(Loaded) {
     log::info("Loading texture packs");
     PackManager::get()->loadPacks();
 }
 
-$on(SaveData) {
+$on_mod(DataSaved) {
     log::info("Saving texture packs");
     PackManager::get()->savePacks();
 }

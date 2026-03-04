@@ -1,5 +1,5 @@
 #include "PackSelectLayer.hpp"
-#include <Noahh/ui/LayerBG.hpp>
+#include <Noahh/ui/General.hpp>
 #include <Noahh/ui/ListView.hpp>
 #include <Noahh/utils/cocos.hpp>
 #include <Noahh/binding/CCMenuItemSpriteExtra.hpp>
