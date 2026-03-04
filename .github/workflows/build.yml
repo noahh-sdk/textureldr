@@ -64,7 +64,7 @@ jobs:
         mkdir bin
         mkdir bin/nightly
         cd bin/nightly
-        curl -L https://github.com/noahh-sdk/noahh/releases/download/v1.0.0/noahh-v1.0.0-${{ matrix.config.platform_suffix }}.zip -o noahh-sdk.zip
+        curl -L https://github.com/noahh-sdk/noahh/releases/download/v1.0.0-beta/noahh-v1.0.0-beta-${{ matrix.config.platform_suffix }}.zip -o noahh-sdk.zip
         tar -xf noahh-sdk.zip
     - name: Configure CMake
       run: |
