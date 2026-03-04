@@ -2,7 +2,7 @@
 	"noahh": "v1.0.0-alpha",
 	"version": "v1.0.0",
 	"id": "noahh.textureldr",
-	"name": "TextureLoader",
+	"name": "TextureLDR",
 	"developer": "Noahh Team",
 	"description": "Texture Pack Manager"
 }
