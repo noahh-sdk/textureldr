@@ -1,5 +1,5 @@
 #include <Noahh/loader/Mod.hpp>
-#include <Noahh/modify/InternalMacros.hpp>
+#include <Noahh/binding/CCMenuItemSpriteExtra.hpp>
 #include "PackSelectLayer.hpp"
 #include <Noahh/modify/MenuLayer.hpp>
 #include <Noahh/modify/IDManager.hpp>
