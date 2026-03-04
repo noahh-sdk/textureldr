@@ -1,11 +1,3 @@
-
-
-#####################################
-#
-# Can't be used until layout branch is merged to main
-#
-#####################################
-
 name: Build Noahh Mod
 
 on:
@@ -16,6 +8,8 @@ on:
 
 env:
   NOAHH_SDK: ${{ github.workspace }}/sdk
+  NOAHH_VERSION: v1.0.0-beta.8
+  CLI_VERSION: v1.4.1
   MOD_NAME: TextureLDR
   MOD_ID: noahh.textureldr
 
@@ -28,7 +22,7 @@ jobs:
         - name: "Windows"
           bin_folder: "windows"
           os: windows-2019
-          extra_flags: '-G "Visual Studio 16 2019" -T host=x64 -A win32'
+          extra_flags: '-T host=x64 -A win32'
           out_paths:  './build/Release/*.dll'
           platform_suffix: 'win'
           
@@ -64,8 +58,9 @@ jobs:
         mkdir bin
         mkdir bin/nightly
         cd bin/nightly
-        curl -L https://github.com/noahh-sdk/noahh/releases/download/v1.0.0-beta/noahh-v1.0.0-beta-${{ matrix.config.platform_suffix }}.zip -o noahh-sdk.zip
+        curl -L https://github.com/noahh-sdk/noahh/releases/download/${{ env.NOAHH_VERSION }}/noahh-${{ env.NOAHH_VERSION }}-${{ matrix.config.platform_suffix }}.zip -o noahh-sdk.zip
         tar -xf noahh-sdk.zip
+      
     - name: Configure CMake
       run: |
         cd ${{ github.workspace }}
@@ -95,8 +90,9 @@ jobs:
       
       - name: Download and Unzip CLI
         run: |
-          curl -L https://github.com/noahh-sdk/cli/releases/download/v1.2.0/noahh-cli-v1.2.0-win.zip -o noahh-cli.zip
+          curl -L https://github.com/noahh-sdk/cli/releases/download/${{ env.CLI_VERSION }}/noahh-cli-${{ env.CLI_VERSION }}-win.zip -o noahh-cli.zip
           tar -xf noahh-cli.zip
+        
       - uses: actions/download-artifact@v3
         with:
           name: build-windows
