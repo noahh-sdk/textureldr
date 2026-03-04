@@ -8,7 +8,7 @@
 #include <Noahh/utils/VersionInfo.hpp>
 #include <Noahh/ui/EnterLayerEvent.hpp>
 #include "Edit.hpp"
-#include <json/stl_serialize.hpp>
+#include <matjson/stl_serialize.hpp>
 
 using namespace noahh::prelude;
 
@@ -20,7 +20,7 @@ struct PackInfo {
     std::vector<std::string> m_creators;
     std::vector<ghc::filesystem::path> m_edits;
 
-    static Result<PackInfo> from(json::Value const& json);
+    static Result<PackInfo> from(matjson::Value const& json);
 };
 
 class Pack {
@@ -45,7 +45,7 @@ public:
 };
 
 template <>
-struct json::Serialize<std::shared_ptr<Pack>> {
-    static json::Value to_json(std::shared_ptr<Pack> const& pack);
-    static std::shared_ptr<Pack> from_json(json::Value const& value);
+struct matjson::Serialize<std::shared_ptr<Pack>> {
+    static matjson::Value to_json(std::shared_ptr<Pack> const& pack);
+    static std::shared_ptr<Pack> from_json(matjson::Value const& value);
 };
