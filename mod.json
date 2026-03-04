@@ -1,8 +1,9 @@
 {
 	"noahh": "v1.0.0",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"id": "noahh.texture-loader",
 	"name": "Texture Loader",
 	"developer": "Noahh Team",
-	"description": "Texture Pack Manager"
+	"description": "Texture Pack Manager",
+	"early-load": true
 }
