@@ -8,6 +8,7 @@
 #include <Noahh/utils/VersionInfo.hpp>
 #include <Noahh/ui/EnterLayerEvent.hpp>
 #include "Edit.hpp"
+#include <json/stl_serialize.hpp>
 
 USE_NOAHH_NAMESPACE();
 
